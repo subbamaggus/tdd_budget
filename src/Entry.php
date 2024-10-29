@@ -22,5 +22,8 @@ final class Entry
    {
        return $this->description;
    }
-
+   public function getTimestamp(): int
+   {
+       return $this->timestamp;
+   }
 }
