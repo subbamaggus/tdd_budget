@@ -31,4 +31,8 @@ final class Entry
     {
         return $this->timestamp;
     }
+    public function saveEntry(): int
+    {
+        return 0;
+    }
 }

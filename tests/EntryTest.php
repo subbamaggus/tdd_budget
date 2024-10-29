@@ -24,5 +24,9 @@ final class EntryTest extends TestCase
         $this->assertEquals(12, $myEntry->getValue());
         $this->assertEquals("mydesc", $myEntry->getDescription());
         $this->assertEquals(1234, $myEntry->getTimestamp());
+        
+        $this->assertEquals(0, $myEntry->saveEntry());
+        
+        $this->assertNotEquals(-1, $myEntry->getId());
    }
 }
