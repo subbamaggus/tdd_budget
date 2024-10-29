@@ -8,7 +8,7 @@ final class EntryTest extends TestCase
    {
        $myEntry = new Entry(12, "mydesc", 1234);
        $this->assertEquals(12, $myEntry->getValue());
-       $this->assertEquals(12, $myEntry->getDescription());
+       $this->assertEquals("mydesc", $myEntry->getDescription());
    }
    public function testNotInitiatedObjectFails(): void
    {

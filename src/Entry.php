@@ -18,5 +18,9 @@ final class Entry
    {
        return $this->value;
    }
+   public function getDescription(): string
+   {
+       return $this->description;
+   }
 
 }
