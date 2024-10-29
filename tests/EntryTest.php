@@ -6,12 +6,12 @@ final class EntryTest extends TestCase
 {
    public function testCreateBogusIdAndReturnThis(): void
    {
-       $myEntry = new Entry(12);
-       $this->assertEquals(12, $myEntry->getId());
+       $myEntry = new Entry(12, "mydesc", 1234);
+       $this->assertEquals(12, $myEntry->getValue());
    }
    public function testNotInitiatedObjectFails(): void
    {
        $this->expectException(Error::class);
-       Entry::getId();
+       Entry::getValue();
    }
 }

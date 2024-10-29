@@ -4,13 +4,19 @@ use InvalidArgumentException;
 final class Entry
 {
    private $_id;
-   public function __construct(int $id)
+   private $_value;
+   private $_description;
+   private $_timestamp;
+   
+   public function __construct(int $value, string $description, int $timestamp)
    {
-      $this->id = $id;
+      $this->value = $value;
+      $this->description = $description;
+      $this->timestamp = $timestamp;
    }
-   public function getId(): int
+   public function getValue(): int
    {
-       return $this->id;
+       return $this->value;
    }
 
 }
