@@ -9,4 +9,9 @@ final class EntryTest extends TestCase
        $myEntry = new Entry(12);
        $this->assertEquals(12, $myEntry->getId());
    }
+   public function testNotInitiatedObjectFails(): void
+   {
+       $this->expectException(Error::class);
+       Entry::getId();
+   }
 }
