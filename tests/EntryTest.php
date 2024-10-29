@@ -17,7 +17,7 @@ final class EntryTest extends TestCase
         $this->expectException(Error::class);
         Entry::getValue();
     }
-    public function testCreateBogusIdAndReturnThis(): void
+    public function testCreateEntryAndReturnThis(): void
     {
         $myEntry = new Entry(12, "mydesc", 1234);
         $this->assertEquals(-1, $myEntry->getId());
