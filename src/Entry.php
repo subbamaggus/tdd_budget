@@ -10,9 +10,14 @@ final class Entry
    
    public function __construct(int $value, string $description, int $timestamp)
    {
-      $this->value = $value;
-      $this->description = $description;
-      $this->timestamp = $timestamp;
+       $this->id = -1;
+       $this->value = $value;
+       $this->description = $description;
+       $this->timestamp = $timestamp;
+   }
+   public function getId(): int
+   {
+       return $this->id;
    }
    public function getValue(): int
    {
